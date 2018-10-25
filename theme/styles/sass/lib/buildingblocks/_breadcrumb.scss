@@ -17,7 +17,7 @@
     display: inline-block;
     margin: 0;
     &:last-child {
-        color: $font-color-default;
+        color: $font-base-color;
         a {
             text-decoration: none;
         }

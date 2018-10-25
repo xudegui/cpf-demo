@@ -83,6 +83,65 @@
     }
 }
 
+.mx-listview.mx-listview-auto-load-more ul.mx-list {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.listview-table.mx-listview.listview-stylingless {
+    margin-bottom: 10px;
+    .mx-listview-item {
+        padding: 10px 10px;
+        background-color: #f1f1f1;
+        border-top: 1px solid #eee;
+        &:hover{
+            background-color: #f1f1f1;
+        }
+        @media (max-width: $screen-sm-max) {
+            padding: 5px 20px;
+            .row{
+                margin: 0;
+            }
+            div[class*="col-"]{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 0;
+                padding-right: 0;
+                border-bottom: 1px solid #dddddd;
+                &:last-child{
+                    border-bottom: 0;
+                }
+            }
+        }
+        &:last-child{
+            border-bottom: 1px solid #eee;
+        }
+        label{
+            padding-top: 7px;
+            color: #000;
+        }
+        .widget-star-rating{
+            padding-top: 5px;
+        }
+        &:nth-child(2n+1){
+            background-color: #fff;
+            &:hover{
+                background-color: #fff;
+            }
+        }
+    }
+    &.listview-table-secondary{
+        .mx-listview-item {
+            &:nth-child(2n+1){
+                background-color: #fafafa;
+            &:hover{
+                background-color: #fafafa;
+            }
+        }
+        }
+    }
+}
+
 // Striped
 .listview-striped.mx-listview {
     .mx-listview-item:nth-child(2n + 1) {
@@ -338,6 +397,11 @@
             width: 8.33333333% !important;
         }
     }
+}
+
+.widget-pagination{
+    width: 100%;
+    text-align: center;
 }
 
 //== Phone specific 

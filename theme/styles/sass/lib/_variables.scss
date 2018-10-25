@@ -31,7 +31,8 @@ $brand-logo:							false !default;
 $brand-logo-height:						26px !default;
 $brand-logo-width:						26px !default; // Only used for CSS brand logo
 
-
+$event-img-size:                        220px !default;
+$bleed-margin:                          ($event-img-size / 2) * -1 !default;
 
 
 
@@ -89,7 +90,7 @@ $link-hover-color:                      darken($link-color, 15%) !default;
 //## Change your font family, weight, line-height, headings and more (used in components/typography)
 
 // Font Family Import (Used for google font plugin in theme creater https://ux.mendix.com/theme-creator.html)
-$font-family-import:                    "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" !default;
+$font-family-import:                    "https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700" !default;
 @if $font-family-import != false { // Only import, if the import is set
     @import url($font-family-import);
 }
@@ -98,11 +99,11 @@ $font-family-import:                    "https://fonts.googleapis.com/css?family
 $font-family-base:                      'Open Sans', sans-serif !default;
 
 // Font Sizes
-$font-size-large:                       16px !default;
+$font-size-large:                       18px !default;
 $font-size-small:                       12px !default;
 
 // Font Weights
-$font-weight-light:                     100 !default;
+$font-weight-light:                     200 !default;
 $font-weight-normal:                    normal !default;         
 $font-weight-semibold:                  600 !default;
 $font-weight-bold:                      bold !default; 
@@ -122,7 +123,7 @@ $font-weight-header:                    $font-weight-normal !default;
 $line-height-base:                      1.428571429 !default;
 
 // Spacing
-$font-header-margin:					15px 0 30px 0 !default;
+$font-header-margin:					0 !default;
 
 // Text Colors
 $font-color-header:				        #17347B !default;
@@ -137,9 +138,9 @@ $font-color-detail:                     $gray-light !default;
 
 // Default Navigation styling
 $navigation-item-height:                60px !default;
-$navigation-item-padding:               5px 15px !default;
+$navigation-item-padding:               8px 20px !default;
 
-$navigation-font-size:                  $font-size-default !default;
+$navigation-font-size:                  14px !default;
 $navigation-sub-font-size:              $font-size-small !default;
 $navigation-glyph-size:                 20px !default; // For glyphicons that you can select in the Mendix Modeler
 
@@ -165,11 +166,11 @@ $navsidebar-sub-font-size:              $font-size-small !default;
 $navsidebar-glyph-size:                 20px !default; // For glyphicons that you can select in the Mendix Modeler
 
 $navsidebar-bg:                         $sidebar-bg !default;
-$navsidebar-bg-hover:                   lighten($navsidebar-bg, 4) !default;
-$navsidebar-bg-active:                  lighten($navsidebar-bg, 8) !default;
-$navsidebar-color:                      #FFF !default;
-$navsidebar-color-hover:                #FFF !default;
-$navsidebar-color-active:               #FFF !default;
+$navsidebar-bg-hover:                   lighten($navsidebar-bg, 10) !default;
+$navsidebar-bg-active:                  lighten($navsidebar-bg, 10) !default;
+$navsidebar-color:                      rgba(0,0,0,0.7) !default;
+$navsidebar-color-hover:                #000 !default;
+$navsidebar-color-active:               #000 !default;
 
 $navsidebar-sub-bg:                     darken($navsidebar-bg, 4) !default;
 $navsidebar-sub-bg-hover:               $navsidebar-sub-bg !default;
@@ -181,16 +182,16 @@ $navsidebar-sub-color-active:           $brand-primary !default;
 $navsidebar-border-color:               $navsidebar-bg-hover !default;
 
 // Navigation topbar
-$navtopbar-font-size:                   $font-size-default !default;
+$navtopbar-font-size:                   14px !default;
 $navtopbar-sub-font-size:               $font-size-small !default;
 $navtopbar-glyph-size:                  1.2em !default; // For glyphicons that you can select in the Mendix Modeler
 
 $navtopbar-bg:                          $topbar-bg !default;
-$navtopbar-bg-hover:                    darken($navtopbar-bg, 4) !default;
-$navtopbar-bg-active:                   darken($navtopbar-bg, 8) !default;
-$navtopbar-color:                       $font-color-default !default;
-$navtopbar-color-hover:                 $navtopbar-color !default;
-$navtopbar-color-active:                $navtopbar-color !default;
+$navtopbar-bg-hover:                    $topbar-bg !default;
+$navtopbar-bg-active:                   $topbar-bg !default;
+$navtopbar-color:                       #424242 !default;
+$navtopbar-color-hover:                 #fff !default;
+$navtopbar-color-active:                #fff !default;
 
 $navtopbar-sub-bg:                      lighten($navtopbar-bg, 4) !default;
 $navtopbar-sub-bg-hover:                $navtopbar-sub-bg !default;
@@ -212,17 +213,17 @@ $navtopbar-border-color:                $topbar-border-color !default;
 $form-input-style:                      default !default;
 
 // Form Label  
-$form-label-color:                      #666 !default;        
-$form-label-size:                       $font-size-default !default;        
-$form-label-weight:                     $font-weight-semibold !default;             
+$form-label-color:                      #222222 !default;        
+$form-label-size:                       14px !default;        
+$form-label-weight:                     $font-weight-bold !default;             
 
 // Form Input dimensions
-$form-input-height:                     auto !default;
+$form-input-height:                     48px !default;
 $form-input-padding-y:                  8px !default;
 $form-input-padding-x:                  10px !default;
-$form-input-font-size:                  $form-label-size !default;
+$form-input-font-size:                  14px !default;
 $form-input-line-height:                $line-height-base !default;
-$form-input-border-radius:              $border-radius-default !default;
+$form-input-border-radius:              0 !default;
 
 // Form Input styling
 $form-input-bg:                         #FFF !default;
@@ -232,7 +233,7 @@ $form-input-color:                      $font-color-default !default;
 $form-input-focus-color:                $form-input-color !default;
 $form-input-disabled-color:             $form-input-color !default;
 $form-input-placeholder-color:          $gray-light !default;
-$form-input-border-color:               $border-color-default !default;
+$form-input-border-color:               #e4e4e3 !default;
 $form-input-border-focus-color:         $brand-primary !default;
 
 // Form Input Static styling
@@ -251,7 +252,7 @@ $form-group-gutter:                     15px !default;
 // Default button style 
 $btn-font-size:                         14px !default;
 $btn-bordered:                          false !default; // Default value false, set to true if you want this effect
-$btn-border-radius:                     $border-radius-default !default; 
+$btn-border-radius:                     0 !default;
 
 // Button Background Color
 $btn-default-bg:                        #FFF !default;
@@ -272,7 +273,7 @@ $btn-warning-border-color:              $btn-warning-bg !default;
 $btn-danger-border-color:               $btn-danger-bg !default;
 
 // Button Text Color
-$btn-default-color:                     $brand-primary !default;
+$btn-default-color:                     $brand-default !default;
 $btn-inverse-color:                     #FFF !default;
 $btn-primary-color:                     #FFF !default;
 $btn-info-color:                        #FFF !default;
@@ -282,7 +283,7 @@ $btn-danger-color:                      #FFF !default;
 
 // Button Background Color
 $btn-default-bg-hover:                  $btn-default-border-color !default;
-$btn-inverse-bg-hover:                  mix($btn-inverse-bg, white, 80%) !default;
+$btn-inverse-bg-hover:                  mix($btn-inverse-bg, black, 80%) !default;
 $btn-primary-bg-hover:                  mix($btn-primary-bg, black, 80%) !default;
 $btn-info-bg-hover:                     mix($btn-info-bg, black, 80%) !default;
 $btn-success-bg-hover:                  mix($btn-success-bg, black, 80%) !default;
@@ -424,7 +425,7 @@ $tabs-bg-active:                        $brand-primary !default;
 //## Default Mendix Modal, Blocking Modal and Login Modal (used in components/modals)
 
 // Background Color
-$modal-header-bg:                       transparent !default;
+$modal-header-bg:                       $bg-color !default;
 
 // Border Color
 $modal-header-border-color:             $border-color-default !default;
@@ -517,7 +518,7 @@ $groupbox-danger-bg:                    $brand-danger !default;
 $groupbox-white-bg:                     #FFF !default;
 
 // Text Color
-$groupbox-default-color:                $font-color-default !default;
+$groupbox-default-color:                #fff !default;
 $groupbox-inverse-color:                #FFF !default;
 $groupbox-primary-color:                #FFF !default;
 $groupbox-info-color:                   #FFF !default;
@@ -567,20 +568,20 @@ $t-spacing-large:                      30px !default;
 $m-spacing-large:                      15px !default;
 
 // Layout spacing
-$layout-spacing-top:                   30px !default;
-$layout-spacing-right:                 30px !default;
-$layout-spacing-bottom:                30px !default;
-$layout-spacing-left:                  30px !default;
+$layout-spacing-top:                   15px !default;
+$layout-spacing-right:                 15px !default;
+$layout-spacing-bottom:                15px !default;
+$layout-spacing-left:                  15px !default;
 
 $t-layout-spacing-top:                 30px !default;
 $t-layout-spacing-right:               30px !default;
 $t-layout-spacing-bottom:              30px !default;
 $t-layout-spacing-left:                30px !default;
 
-$m-layout-spacing-top:                 15px !default;
-$m-layout-spacing-right:               15px !default;
-$m-layout-spacing-bottom:              15px !default;
-$m-layout-spacing-left:                15px !default;
+$m-layout-spacing-top:                 30px !default;
+$m-layout-spacing-right:               30px !default;
+$m-layout-spacing-bottom:              30px !default;
+$m-layout-spacing-left:                30px !default;
 
 // Combined layout spacing 
 $layout-spacing:                       $layout-spacing-top $layout-spacing-right $layout-spacing-bottom $layout-spacing-left !default;

@@ -15,6 +15,18 @@ import com.mendix.systemwideinterfaces.core.IMendixObject;
 public class Microflows
 {
 	// These are the microflows for the Administration module
+	public static boolean afterStartup(IContext context)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			return (java.lang.Boolean)Core.execute(context, "Administration.AfterStartup", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
 	public static void changeMyPassword(IContext context, administration.proxies.AccountPasswordData _accountPasswordData)
 	{
 		try
@@ -35,6 +47,18 @@ public class Microflows
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("AccountPasswordData", _accountPasswordData == null ? null : _accountPasswordData.getMendixObject());
 			Core.execute(context, "Administration.ChangePassword", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void clearData(IContext context)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			Core.execute(context, "Administration.ClearData", params);
 		}
 		catch (CoreException e)
 		{
@@ -108,6 +132,82 @@ public class Microflows
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("AccountPasswordData", _accountPasswordData == null ? null : _accountPasswordData.getMendixObject());
 			Core.execute(context, "Administration.SaveNewAccount", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static java.util.List<eventmanagement.proxies.Attendee> setupAttendees(IContext context)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			java.util.List<IMendixObject> objs = Core.execute(context, "Administration.SetupAttendees", params);
+			java.util.List<eventmanagement.proxies.Attendee> result = null;
+			if (objs != null)
+			{
+				result = new java.util.ArrayList<eventmanagement.proxies.Attendee>();
+				for (IMendixObject obj : objs)
+					result.add(eventmanagement.proxies.Attendee.initialize(context, obj));
+			}
+			return result;
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void setupData(IContext context)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			Core.execute(context, "Administration.SetupData", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void setupImages(IContext context)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			Core.execute(context, "Administration.SetupImages", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static java.util.List<eventmanagement.proxies.Session> setupSessions(IContext context)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			java.util.List<IMendixObject> objs = Core.execute(context, "Administration.SetupSessions", params);
+			java.util.List<eventmanagement.proxies.Session> result = null;
+			if (objs != null)
+			{
+				result = new java.util.ArrayList<eventmanagement.proxies.Session>();
+				for (IMendixObject obj : objs)
+					result.add(eventmanagement.proxies.Session.initialize(context, obj));
+			}
+			return result;
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void showHomePage(IContext context)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			Core.execute(context, "Administration.ShowHomePage", params);
 		}
 		catch (CoreException e)
 		{

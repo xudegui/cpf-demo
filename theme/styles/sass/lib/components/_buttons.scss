@@ -8,7 +8,7 @@
 .mx-button {
     display: inline-block;
     margin-bottom: 0;
-    padding: 0.6em 1em;
+    padding: 0.5em 1.2em;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -26,10 +26,12 @@
     border-radius: $btn-border-radius;
     background-color: $btn-default-bg;
     background-image: none;
+    font-weight: $font-weight-normal;
     box-shadow: none;
     text-shadow: none;
     font-size: $btn-font-size;
     line-height: $line-height-base;
+    border-radius: 50px;
 
     &:hover,
     &:focus,
@@ -78,6 +80,9 @@
 .btn,
 .btn-default {
     @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border-color, $btn-default-bg-hover);
+    &:hover, &:focus, &:active{
+        color: #fff;
+    }
 }
 
 .btn-primary {
@@ -107,6 +112,7 @@
 
 // Button Sizes
 .btn-lg {
+    padding: 0.6em 3em;
     font-size: $font-size-large;
     img {
         height: calc($font-size-small + 4px);
@@ -117,6 +123,12 @@
     font-size: $font-size-small;
     img {
         height: calc($font-size-small + 4px);
+    }
+}
+
+.btn-responsive{
+    @media (max-width: $screen-xs-max) {
+        width: 100%;
     }
 }
 
@@ -159,6 +171,88 @@
         margin: 0 0 5px 0;
     }
 }
+.btns-social{
+    .btn-social{
+        &:first-child{
+            margin-left: 0;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+.btn-social{
+    margin: $gutter-size 5px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 0;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    &.btn-sm{
+        width: 32px;
+        height: 32px;
+        &:before{
+            width: 16px;
+            height: 16px;
+            background-size: 16px 16px;
+        }
+    }
+    &:before{
+        content: "";
+        width: 28px;
+        height: 28px;
+        background-size: 28px 28px;
+        display: block;
+        background-repeat: no-repeat;
+    }
+    &.btn-facebook{
+        &:before{
+            background-image: url($facebook);
+        }
+    }
+    &.btn-instagram{
+        &:before{
+            background-image: url($instagram);
+        }
+    }
+    &.btn-linkedin{
+        &:before{
+            background-image: url($linkedin);
+        }
+    }
+    &.btn-twitter{
+        &:before{
+            background-image: url($twitter);
+        }
+    }
+}
+
+.toggle-btn{
+    height: 100%;
+    //width: 40px;
+    flex-direction: column;
+    justify-content: center;
+    &:before, &:after, a{
+        content: "";
+        background-color: $navigation-color;
+        height: 2px;
+        width: 30px;
+        display: block;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+}
+.btn + .btn{
+    margin-left: 5px;
+}
+
+.mx-dateinput-select-button, .mx-fileinput-upload-button{
+    @extend .btn-primary;
+}
 
 //== Phone specific 
 //-------------------------------------------------------------------------------------------------------------------//
@@ -173,4 +267,11 @@
             transform: translateY(1px);
         }
     }
+}
+.widget-pagination .pagination .mx-button, .widget-pagination .pagination .btn{
+    padding: 5px;
+}
+
+.webmodelerEdit{
+        z-index: 9999;
 }

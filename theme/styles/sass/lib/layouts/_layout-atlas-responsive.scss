@@ -23,7 +23,7 @@
                         bottom: 0;
                         left: $sidebar-width;
                         display: block;
-                        overflow-y: auto;
+                        overflow-y: scroll;
                         min-width: 200px;
                         padding-top: 10px;
                     }
@@ -85,6 +85,13 @@
     // Topbar
     .region-topbar {
     }
+    
+    .region-content{
+        .event-info{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
 }
 
 // Topbar variant
@@ -100,19 +107,8 @@
             display: none;
 
             @media (max-width: $screen-xs-max) {
-                display: inline-block;
+                display: inline-flex;
             }
-        }
-    }
-}
-
-// Fix Safari issue of sidebar disappearing
-.profile-tablet {
-    .mx-scrollcontainer:not(.mx-scrollcontainer-open) > .region-sidebar {
-        overflow-y: auto;
-
-        .mx-scrollcontainer-wrapper {
-            overflow: visible;
         }
     }
 }

@@ -19,7 +19,7 @@
                 height: $navigation-item-height;
                 padding: $navigation-item-padding;
                 color: $navigation-color;
-                border-bottom: 1px solid $navigation-border-color;
+                border-bottom: 1px solid #e4e4e3;
                 border-radius: 0;
                 background-color: $navigation-bg;
                 text-shadow: none;
@@ -177,7 +177,7 @@
             & > li {
                 & > a {
                     color: $navsidebar-color;
-                    border-color: $navsidebar-border-color;
+                    border-color: #e4e4e3;
                     background-color: $navsidebar-bg;
                     font-size: $navsidebar-font-size;
                     .caret {

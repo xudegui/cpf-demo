@@ -112,39 +112,6 @@
     justify-content: center !important;
 }
 
-// Spacing none
-.spacing-inner-none {
-    padding: 0 !important;
-}
-.spacing-inner-top-none {
-    padding-top: 0 !important;
-}
-.spacing-inner-right-none {
-    padding-right: 0 !important;
-}
-.spacing-inner-bottom-none {
-    padding-bottom: 0 !important;
-}
-.spacing-inner-left-none {
-    padding-left: 0 !important;
-}
-
-.spacing-outer-none {
-    margin: 0 !important;
-}
-.spacing-outer-top-none {
-    margin-top: 0 !important;
-}
-.spacing-outer-right-none {
-    margin-right: 0 !important;
-}
-.spacing-outer-bottom-none {
-    margin-bottom: 0 !important;
-}
-.spacing-outer-left-none {
-    margin-left: 0 !important;
-}
-
 // Spacing small
 .spacing-inner {
     padding: $spacing-small !important;
@@ -277,6 +244,39 @@
     @include layout-spacing($type: margin, $direction: left, $device: responsive, $is_important: true);
 }
 
+// Spacing none
+.spacing-inner-none {
+    padding: 0 !important;
+}
+.spacing-inner-top-none {
+    padding-top: 0 !important;
+}
+.spacing-inner-right-none {
+    padding-right: 0 !important;
+}
+.spacing-inner-bottom-none {
+    padding-bottom: 0 !important;
+}
+.spacing-inner-left-none {
+    padding-left: 0 !important;
+}
+
+.spacing-outer-none {
+    margin: 0 !important;
+}
+.spacing-outer-top-none {
+    margin-top: 0 !important;
+}
+.spacing-outer-right-none {
+    margin-right: 0 !important;
+}
+.spacing-outer-bottom-none {
+    margin-bottom: 0 !important;
+}
+.spacing-outer-left-none {
+    margin-left: 0 !important;
+}
+
 // Display properties
 .d-inline {
     display: inline !important;
@@ -286,4 +286,44 @@
 }
 .d-block {
     display: block !important;
+}
+
+
+//overflow
+.o-visible{
+    overflow: visible !important;
+}
+.o-hidden{
+    overflow: hidden !important;
+}
+
+.h-100{
+    height: 100% !important;
+}
+.w-100{
+    width: 100% !important;
+}
+
+.bleed-top{
+    margin-top: $bleed-margin !important;
+}
+.bleed-bottom{
+    margin-bottom: $bleed-margin !important;
+}
+.bleed-left{
+    margin-left: $bleed-margin !important;
+}
+.bleed-right{
+    margin-right: $bleed-margin !important;
+}
+
+.border-none{
+    border: 0 !important;
+}
+
+.border-radius-none{
+    border-radius: 0 !important;
+}
+.fixed-width{
+    max-width: 370px;
 }

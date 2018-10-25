@@ -267,3 +267,12 @@ table.table-row-l.mx-table {
 table.table-fixed {
     table-layout: fixed;
 }
+
+div.table-header.mx-layoutgrid{
+    padding: 10px 10px !important;
+    .search-bar{
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-bottom: 0px;
+    }
+}

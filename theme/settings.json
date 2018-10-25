@@ -1,9 +1,5 @@
 {
     "pageTemplates" : "WebModeler",
-    "cssFiles": [
-        "styles/css/lib/lib.css",
-        "styles/css/custom/custom.css"
-    ],
     "designProperties": {
         "Widget": [
             {
@@ -128,7 +124,26 @@
                         "class": "pull-right"
                     }
                 ]
+            },
+            {
+                "name": "Hide on phone",
+                "type": "Toggle",
+                "description": "Hide the widget on mobile.",
+                "class": "hidden-xs"
+            },
+            {
+                "name": "Hide on tablet",
+                "type": "Toggle",
+                "description": "Hide the widget on tablet.",
+                "class": "hidden-sm"
+            },
+            {
+                "name": "Hide on desktop",
+                "type": "Toggle",
+                "description": "Hide the widget on desktop.",
+                "class": "hidden-md"
             }
+            
         ],
         "DivContainer": [
             {
@@ -163,10 +178,187 @@
                 ]
             },
             {
+                "name": "Flex size desktop",
+                "type": "Dropdown",
+                "description": "Select the size of the column when the screen is desktop.",
+                "options": [
+                    {
+                        "name": "Large 1",
+                        "class": "large-1"
+                    },
+                    {
+                        "name": "Large 2",
+                        "class": "large-2"
+                    },
+                    {
+                        "name": "Large 3",
+                        "class": "large-3"
+                    },
+                    {
+                        "name": "Large 4",
+                        "class": "large-4"
+                    },
+                    {
+                        "name": "Large 5",
+                        "class": "large-5"
+                    },
+                    {
+                        "name": "Large 6",
+                        "class": "large-6"
+                    },
+                    {
+                        "name": "Large 7",
+                        "class": "large-7"
+                    },
+                    {
+                        "name": "Large 8",
+                        "class": "large-8"
+                    },
+                    {
+                        "name": "Large 9",
+                        "class": "large-9"
+                    },
+                    {
+                        "name": "Large 10",
+                        "class": "large-10"
+                    },
+                    {
+                        "name": "Large 11",
+                        "class": "large-11"
+                    },
+                    {
+                        "name": "Large 12",
+                        "class": "large-12"
+                    }
+                ]
+            },
+            {
+                "name": "Flex size tablet",
+                "type": "Dropdown",
+                "description": "Select the size of the column when the screen is tablet.",
+                "options": [
+                    {
+                        "name": "Medium 1",
+                        "class": "medium-1"
+                    },
+                    {
+                        "name": "Medium 2",
+                        "class": "medium-2"
+                    },
+                    {
+                        "name": "Medium 3",
+                        "class": "medium-3"
+                    },
+                    {
+                        "name": "Medium 4",
+                        "class": "medium-4"
+                    },
+                    {
+                        "name": "Medium 5",
+                        "class": "medium-5"
+                    },
+                    {
+                        "name": "Medium 6",
+                        "class": "medium-6"
+                    },
+                    {
+                        "name": "Medium 7",
+                        "class": "medium-7"
+                    },
+                    {
+                        "name": "Medium 8",
+                        "class": "medium-8"
+                    },
+                    {
+                        "name": "Medium 9",
+                        "class": "medium-9"
+                    },
+                    {
+                        "name": "Large 10",
+                        "class": "large-10"
+                    },
+                    {
+                        "name": "Medium 11",
+                        "class": "medium-11"
+                    },
+                    {
+                        "name": "Medium 12",
+                        "class": "medium-12"
+                    }
+                ]
+            },
+            {
+                "name": "Flex size mobile",
+                "type": "Dropdown",
+                "description": "Select the size of the column when the screen is mobile. ",
+                "options": [
+                    {
+                        "name": "Samll 1",
+                        "class": "small-1"
+                    },
+                    {
+                        "name": "Small 2",
+                        "class": "small-2"
+                    },
+                    {
+                        "name": "Small 3",
+                        "class": "small-3"
+                    },
+                    {
+                        "name": "Small 4",
+                        "class": "small-4"
+                    },
+                    {
+                        "name": "Small 5",
+                        "class": "small-5"
+                    },
+                    {
+                        "name": "Small 6",
+                        "class": "small-6"
+                    },
+                    {
+                        "name": "Small7",
+                        "class": "small-7"
+                    },
+                    {
+                        "name": "Small 8",
+                        "class": "small-8"
+                    },
+                    {
+                        "name": "Small 9",
+                        "class": "small-9"
+                    },
+                    {
+                        "name": "Small 10",
+                        "class": "small-10"
+                    },
+                    {
+                        "name": "Small 11",
+                        "class": "small-11"
+                    },
+                    {
+                        "name": "Small 12",
+                        "class": "small-12"
+                    }
+                ]
+            },
+            {
                 "name": "Background color",
                 "type": "Dropdown",
                 "description": "Choose one of the following colors to change the background color of the container.",
                 "options": [
+                    {
+                        "name": "Main",
+                        "class": "background-main"
+                    },
+                    {
+                        "name": "Secondary",
+                        "class": "background-secondary"
+                    },
+                    {
+                        "name": "Split",
+                        "class": "background-split"
+                    },
                     {
                         "name": "Default",
                         "class": "background-default"
@@ -235,6 +427,41 @@
                     {
                         "name": "Top",
                         "class": "btn-icon-top"
+                    }
+                ]
+            },
+            {
+                "name": "Button circle",
+                "type": "Toggle",
+                "description": "Make the button a social media button",
+                "class": "btn-social"
+            },
+            {
+                "name": "Button square",
+                "type": "Toggle",
+                "description": "Make the button sqaure.",
+                "class": "btn-square"
+            },
+            {
+                "name": "Social media platform",
+                "type": "Dropdown",
+                "description": "Choose the social icon of the button.",
+                "options": [
+                    {
+                        "name": "Facebook",
+                        "class": "btn-facebook"
+                    },
+                    {
+                        "name": "Instagram",
+                        "class": "btn-instagram"
+                    },
+                    {
+                        "name": "Linkedin",
+                        "class": "btn-linkedin"
+                    },
+                    {
+                        "name": "Twitter",
+                        "class": "btn-twitter"
                     }
                 ]
             }
@@ -401,7 +628,7 @@
                 "class": "groupbox-callout"
             }
         ],
-        "Image": [
+        "DynamicImageViewer": [
             {
                 "name": "Style",
                 "type": "Dropdown",
@@ -426,7 +653,208 @@
                 "type": "Toggle",
                 "description": "Align the image in the center of an element.",
                 "class": "img-center"
-            }
+            },
+            {
+                "name": "Image filter",
+                "type": "Dropdown",
+                "description": "Add a filter to the image.",
+                "options": [
+                    {
+                        "name": "Darken",
+                        "class": "filter-dark"
+                    },
+                    {
+                        "name": "Lighten",
+                        "class": "filter-light"
+                    }
+                ]
+            },
+            {
+                "name": "Add shadow",
+                "type": "Toggle",
+                "description": "Add a shadow to the image.",
+                "class": "img-boxshadow"
+            },
+            {
+                "name": "Image fit",
+                "type": "Dropdown",
+                "description": "Specify how the image should be resized to fit its container.",
+                "options": [
+                    {
+                        "name": "Fit cover",
+                        "class": "fit-cover"
+                    },
+                    {
+                        "name": "Fit contain",
+                        "class": "fit-contain"
+                    },
+                    {
+                        "name": "Fit fill",
+                        "class": "fit-fill"
+                    },
+                    {
+                        "name": "Fit none",
+                        "class": "fit-none"
+                    }
+                ]
+            },
+            {
+                "name": "Image position",
+                "type": "Dropdown",
+                "description": "Defines how the image is positioned.",
+                "options": [
+                    {
+                        "name": "Left top",
+                        "class": "op-left-top"
+                    },
+                    {
+                        "name": "Left center",
+                        "class": "op-left-center"
+                    },
+                    {
+                        "name": "Left bottom",
+                        "class": "op-left-bottom"
+                    },
+                    {
+                        "name": "Right top",
+                        "class": "op-right-top"
+                    },
+                    {
+                        "name": "Right center",
+                        "class": "op-right-center"
+                    },
+                    {
+                        "name": "Right bottom",
+                        "class": "op-right-bottom"
+                    },
+                    {
+                        "name": "Center top",
+                        "class": "op-center-top"
+                    },
+                    {
+                        "name": "Center center",
+                        "class": "op-center-center"
+                    },
+                    {
+                        "name": "Center bottom",
+                        "class": "op-center-bottom"
+                    }
+                ]
+            } 
+        ],
+        "StaticImageViewer": [
+            {
+                "name": "Style",
+                "type": "Dropdown",
+                "description": "Choose the style of your image.",
+                "options": [
+                    {
+                        "name": "Rounded",
+                        "class": "img-rounded"
+                    },
+                    {
+                        "name": "Thumbnail",
+                        "class": "img-thumbnail"
+                    },
+                    {
+                        "name": "Circle",
+                        "class": "img-circle"
+                    }
+                ]
+            },
+            {
+                "name": "Center",
+                "type": "Toggle",
+                "description": "Align the image in the center of an element.",
+                "class": "img-center"
+            },
+            {
+                "name": "Add shadow",
+                "type": "Toggle",
+                "description": "Add a shadow to the image.",
+                "class": "img-boxshadow"
+            },
+            {
+                "name": "Image filter",
+                "type": "Dropdown",
+                "description": "Add a filter to the image.",
+                "options": [
+                    {
+                        "name": "Darken",
+                        "class": "filter-dark"
+                    },
+                    {
+                        "name": "Lighten",
+                        "class": "filter-light"
+                    }
+                ]
+            },
+            {
+                "name": "Image fit",
+                "type": "Dropdown",
+                "description": "Specify how the image should be resized to fit its container.",
+                "options": [
+                    {
+                        "name": "Fit cover",
+                        "class": "fit-cover"
+                    },
+                    {
+                        "name": "Fit contain",
+                        "class": "fit-contain"
+                    },
+                    {
+                        "name": "Fit fill",
+                        "class": "fit-fill"
+                    },
+                    {
+                        "name": "Fit none",
+                        "class": "fit-none"
+                    }
+                ]
+            },
+            {
+                "name": "Image position",
+                "type": "Dropdown",
+                "description": "Defines how the image is positioned.",
+                "options": [
+                    {
+                        "name": "Left top",
+                        "class": "op-left-top"
+                    },
+                    {
+                        "name": "Left center",
+                        "class": "op-left-center"
+                    },
+                    {
+                        "name": "Left bottom",
+                        "class": "op-left-bottom"
+                    },
+                    {
+                        "name": "Right top",
+                        "class": "op-right-top"
+                    },
+                    {
+                        "name": "Right center",
+                        "class": "op-right-center"
+                    },
+                    {
+                        "name": "Right bottom",
+                        "class": "op-right-bottom"
+                    },
+                    {
+                        "name": "Center top",
+                        "class": "op-center-top"
+                    },
+                    {
+                        "name": "Center center",
+                        "class": "op-center-center"
+                    },
+                    {
+                        "name": "Center bottom",
+                        "class": "op-center-bottom"
+                    }
+                ]
+            } 
         ],
         "Label": [
             {

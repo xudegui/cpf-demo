@@ -14,13 +14,13 @@
     -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
     color: $form-input-color;
-    border: 1px solid $form-input-border-color;
+    border: 2px solid $form-input-border-color;
     border-radius: $form-input-border-radius;
     background-color: $form-input-bg;
     background-image: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    font-size: $form-input-font-size;
+    font-size: $font-base-size;
     line-height: $form-input-line-height;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -39,6 +39,19 @@
 
 textarea.form-control {
     height: auto;
+}
+
+.mx-dateinput{
+    .form-control{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .mx-dateinput-select-button{
+        height: $form-input-height;
+        margin: 0;
+        border-top-right-radius: $form-input-border-radius;
+        border-bottom-right-radius: $form-input-border-radius;
+    }
 }
 
 
@@ -67,10 +80,7 @@ select.form-control {
 .form-control-static {
     overflow: hidden;
     min-height: auto;
-    padding-top: $form-input-padding-y;
-    padding-bottom: $form-input-padding-y;
-    padding-left: $form-input-padding-x;
-    border-bottom: 1px solid $form-input-static-border-color;
+    padding: 0 0 $form-input-padding-y;
     font-size: $form-input-font-size;
     line-height: $form-input-line-height;
 }
@@ -88,15 +98,22 @@ select.form-control {
     }
     /* File input widget hover fix */
     .mx-wrapped-form {
+        //overflow: visible;
         .mx-wrapped-input {
             cursor: pointer;
+            z-index: 100;
         }
-        .mx-fileinput-upload-button:hover {
-            background-color: $btn-default-bg;
+        .mx-fileinput-upload-button{
+            height: $form-input-height;
+            top: -2px;
+            position: relative;
         }
+        
     }
 }
-
+.form-img{
+   margin-bottom: $form-group-margin-bottom; 
+}
 // Form Group
 .form-group {
     margin-bottom: $form-group-margin-bottom;
@@ -115,6 +132,7 @@ select.form-control {
         color: $form-label-color;
         font-size: $form-label-size;
         font-weight: $form-label-weight;
+        margin-bottom: 5px;
     }
 }
 
@@ -129,12 +147,8 @@ select.form-control {
     }
 }
 
-// Fixes alignmcode ent bug on iPads / iPhones where datefield is not aligned vertically
-@media only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 0) {
-    input[type=date],
-    input[type=time],
-    input[type=datetime-local],
-    input[type=month] {
-        line-height: 1;
+.form-group_date{
+    p{
+        margin-bottom: 0;
     }
 }
