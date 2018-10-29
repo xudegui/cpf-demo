@@ -30,7 +30,7 @@ jobs:
       CF_PASSWORD: {{cf-password}}
       CF_SPACE: {{cf-staging-space}}
       CF_USER: {{cf-user}}
-      BUILDPACK: https://github.com/mendix/cf-mendix-buildpack.git#v1.9.2
+      BUILDPACK: https://github.com/mendix/cf-mendix-buildpack.git
       MENDIX_DB_NAME: {{mendix-staging-db-name}}
       MENDIX_DATABASE_URL : {{mendix-staging-database-url}}
       MENDIX_ADMIN_PASSWORD: {{mendix-staging-admin-password}}
@@ -76,7 +76,7 @@ jobs:
       CF_API: {{cf-api}}
       CF_USER: {{cf-user}}
       CF_PASSWORD: {{cf-password}}
-      BUILDPACK: https://github.com/mendix/cf-mendix-buildpack.git#v1.9.2
+      BUILDPACK: https://github.com/mendix/cf-mendix-buildpack.git
       APP_NAME: mendix-demo-app
       MENDIX_DB_NAME: {{mendix-prod-db-name}}
       MENDIX_ADMIN_PASSWORD: {{mendix-prod-admin-password}}
