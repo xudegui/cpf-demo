@@ -19,7 +19,7 @@ loginAndTargetSpace(){
 }
 
 pushApplication() {
-  cf push --no-start -p $SRC/CF-Push-Demo/ $APP_NAME -n $APP_HOSTNAME -d $APP_DOMAIN -b $BUILDPACK
+  cf push --no-start -p $SRC/ $APP_NAME -n $APP_HOSTNAME -d $APP_DOMAIN -b $BUILDPACK
 
   
   if [ ! -z "$MENDIX_ADMIN_PASSWORD" ]; then
