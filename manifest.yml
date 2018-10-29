@@ -1,0 +1,9 @@
+---
+applications:
+- name: cpf-demo-app
+  instances: 1
+  buildpack: https://github.com/mendix/cf-mendix-buildpack
+  services:
+  - mendix-demo-db
+  env:
+    ADMIN_PASSWORD: P@ssw0rd!
