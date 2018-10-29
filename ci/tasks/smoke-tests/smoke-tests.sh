@@ -2,7 +2,7 @@
 
 echo "Running smoke tests"
 
-curl --fail "$URL/rest/healthservice/v1/health" -k
+curl --fail "$URL/" -k
 
 CURL_STATUS=$?
 
